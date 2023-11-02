@@ -3,28 +3,27 @@ package com.example.passleybank
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.content.Intent
-import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity() {
+class AccountsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_accounts)
 
         // Retrieving references to buttons
-        val accountsButton: Button = findViewById(R.id.accountsButton)
-        val transactionsButton: Button = findViewById(R.id.transactionsButton)
+        val homeButton: Button = findViewById(R.id.accountsToHomeButton)
+        val transactionsButton: Button = findViewById(R.id.accountsToTransactionsButton)
 
         // Setting click listeners for the buttons
-        accountsButton.setOnClickListener {
-            // Perform an action when the Accounts button is clicked
-            val intent = Intent(this@MainActivity, AccountsActivity::class.java)
+        homeButton.setOnClickListener {
+            // Perform an action when the Home button is clicked
+            val intent = Intent(this@AccountsActivity, MainActivity::class.java)
             startActivity(intent)
         }
 
         transactionsButton.setOnClickListener {
             // Perform an action when the Transactions button is clicked
-            val intent = Intent(this@MainActivity, TransactionsActivity::class.java)
+            val intent = Intent(this@AccountsActivity, TransactionsActivity::class.java)
             startActivity(intent)
         }
     }

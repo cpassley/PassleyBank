@@ -13,7 +13,16 @@
         android:theme="@style/Theme.PassleyBank"
         tools:targetApi="31">
         <activity
-            android:name=".Accounts"
+            android:name=".TransactionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SavingsTransactionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CheckingTransactionsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AccountsActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
